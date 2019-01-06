@@ -1,0 +1,400 @@
+*{
+	padding:0;
+	margin:0;
+}
+ul,li,ol,p{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #9a9791;
+}
+.clear:after{
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+}
+.head{
+	width: 100%;
+	height: 130px;
+	background-color: #fff;
+	z-index: 2;
+}
+.head .part1{
+	width :1180px;
+	height :130px;
+	margin :0 auto;
+	background-color: #fff;
+}
+.title{
+	color: #9a9791;
+	margin-top: 15px;
+	font-size: 15px;
+	display: inline-block;
+}
+.menu1{
+	width: 737px;
+	height: 30px;
+	margin-left: 332px;
+	display: inline-block;
+}
+.menu1 a{
+	font-size: 11px;
+	margin-left: 13px;
+}
+.menu2 .ul1 li{
+	width: 82px;
+	height: 38px;
+	border: 1px solid #dededd;
+	float: right;
+	margin-top: -30px;
+	color: #9a9791;
+}
+.menu2 .ul1 li:first-child{
+	background-color: #ff4d04;
+	border: 1px solid #ff4d04;
+	color: #fff;
+}
+.menu2 .ul2{
+	width: 660px;
+	height: 15px;
+	margin: 0 auto;
+	display: inline-block;
+	margin-left: 245px;
+}
+.menu2 .ul2 li{
+	float: left;
+	padding :0 9px;
+	height: 15px;
+	background: url(img/shuxian.jpg) no-repeat right center;
+	margin-top: 3px;
+	font-size: 9px;
+	color: #9a9791;
+}
+.menu2 .ul2 li:last-child{
+	background: none;
+}
+.menu3{
+	width: 970px;
+	height: 43px;
+	margin :0 auto;
+	margin-left: 0;
+}
+.menu3>li{
+	float: left;
+	line-height: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+	margin-left: 55px;	
+	margin-top: 12px;
+}
+.menu3 li a{
+	color: #000;
+}
+.menu3 li:first-child{
+	background-color: #ff4d04;
+	padding :12px 35px;
+	margin-top: 0;
+	margin-left: 0;
+}
+.subject1{
+	width: 100%;
+	height: 42px;
+	background-color: #000;
+}
+.subject1 .part1{
+	width: 1180px;
+	height: 42px;
+	margin: 0 auto;
+	background-color: #000;
+}
+.subject1 .part1 .nav{
+	width: 1180px;
+	height: 42px;
+}
+.subject1 .part1 .nav li{
+	width: 85px;
+	line-height: 42px; 
+	float: left;
+	color: #fff;
+	margin-left: 42.5px;
+	text-align: center;
+	font-size: 16px;
+}
+.part1 .nav li:first-child{
+	background-color: #fe0d4a;
+	margin-left: 0;
+}
+.subject2{
+	width: 100%;
+	height: 37px;
+	background-color: #f6f5f4;
+}
+.subject2 .part1{
+	width: 1180px;
+	height: 37px;
+	margin: 0 auto;
+	background-color: #f6f5f4;
+}
+.subject2 .part1 ul{
+	line-height: 10px;
+	width: 490px;
+}
+.subject2 .part1 ul li{
+	float: left;
+	font-size: 10px;
+}
+.subject2 .part1 ul li a{
+	color: #000;
+}
+.subject3{
+	width: 100%;
+	height: 622px;
+	background-color: #f6f5f4;
+}
+.subject3 .part1{
+	width: 1180px;
+	height: 622px;
+	margin: 0 auto;
+	background-color: #f6f5f4;
+}
+.subject3 .left{
+	width: 995px;
+	height: 622px;
+	background-color: #fff;
+	float: left;
+}
+.subject3 .right{
+	width: 180px;
+	height: 622px;
+	background-color: #fff;
+	float: right;
+}
+.subject3 .box2{
+	display: inline-block;
+	width: 502px;
+	height: 431px;
+	float: right;
+	margin-top: -502px;
+}
+.box2 .dec{
+	width: 26px;
+	height: 28px;
+	border: 1px solid #aca7a2;
+	background-color: #fff;
+	margin-left: 65px;
+}
+.box2 .num{
+	margin-left: -4px;
+	width: 34px;
+	height: 25px;
+	padding-left: 22px;
+}
+.box2 .add{
+	margin-left: -5px;
+	width: 26px;
+	height: 28px;
+	border: 1px solid #aca7a2;
+	background-color: #fff;
+}
+.box2 form input{
+	width: 150px;
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid #ff0754;
+}
+#box{
+	width:408px;
+	height:408px;
+	position:relative;
+	margin-top:22px;
+	margin-left: 22px; 
+	display: inline-block;
+}
+#img1{
+	width:408px;
+	height:408px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border:1px solid #aca7a2;
+}
+#slider{
+	width:102px;
+	height:102px;
+	position:absolute;
+	left:0;
+	top:0;
+	background:#CCC;
+	opacity:0.4;
+	cursor: move;
+	display:none; 
+	filter:alpha(opacity=40);
+}
+#img2{
+	position:absolute;
+	right:0;
+	top:0;
+	display:none; 
+	width:408px;
+	height:408px;
+	overflow:hidden;
+	border: 1px solid #aca7a2;
+}
+#Bimg{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.subject4{
+	width: 100%;
+	height: 106px;
+	background-color: #f6f5f4;
+}
+.subject4 .part1{
+	width: 1180px;
+	height: 106px;
+	margin :0 auto;
+}
+.subject5{
+	width: 100%;
+	height: 700px;
+	background-color: #f8f7f6;
+	opacity: 0.7;
+	display: none;
+	position: fixed;
+	top:0;
+	z-index: 2;
+}
+.subject6{
+	width: 399px;
+	height: 220px;
+	background-color: #fff;
+	border: 2px solid #aca9d3;
+	opacity: 1;
+	display: none;
+	position: fixed;
+	top: 216px;
+	left: 477px;
+	z-index: 3;
+}
+.subject6 input{
+	width: 150px;
+	height: 40px;
+	border: 1px solid #ff0754;
+	border-radius: 5px;
+}
+.subject7{
+	width: 100%;
+	height: 185px;
+	background-color: #fff;
+}
+.subject7 .part1{
+	width: 1180px;
+	height: 185px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+.menu10{
+	display: inline;
+	margin-left: 60px;
+}
+.menu10>li{
+	width: 100px;
+	float: left;
+	margin-top: 30px;
+	font-size: 12px;
+	margin-left: 25px;
+}
+.menu10>li:first-child{
+	float: left;
+	font-size: 12px;
+	margin-left: 60px;
+}
+.menu10 ul{
+	height: 130px;
+}
+.menu10 ul li{
+	text-indent: 17px;
+	line-height: 25px;
+}
+.tail{
+	width: 100%;
+	height: 165px;
+	background-color: #fff;
+}
+.tail .part1{
+	width: 1180px;
+	height: 165px;
+	margin:0 auto;
+	background-color: #fff;
+}
+.tail .part1 ul{
+	margin-bottom: 8px;
+}
+.nav1{
+	width: 660px;
+	height: 15px;
+	margin: 0 auto;
+}
+.nav1 li{
+	float: left;
+	padding :0 15px;
+	height: 15px;
+	background: url(img/shuxian.jpg) no-repeat right center;
+	margin-top: 17px;
+}
+.nav1 li a{
+	display: block;
+	height: 15px;
+	font-size: 12px;
+}
+.nav1 li:last-child{
+	background: none;
+	padding:0 0;
+}
+.nav2{
+	width: 488px;
+	height: 14px;
+	margin: 0 auto;
+	font-size: 12px;
+	color: #9a9791;
+	padding-top: 20px;
+}
+.nav2 li{
+	height: 15px;
+	height: 15px;
+}
+.nav3{
+	height: 15px;
+	margin: 0 auto;
+	color: #9a9791;
+}
+.nav3 li{
+	float: left;
+	padding :0 10px;
+	height: 15px;
+	background: url(img/shuxian.jpg) no-repeat right center;
+	display: inline-block;
+	font-size: 10px;
+}
+.nav4{
+	width: 132px;
+	height: 15px;
+	margin: 0 auto;
+	color: #9a9791;
+	font-size: 10px;
+}
+.nav5{
+	width: 780px;
+	margin: 0 auto;
+}
+.nav5 li{
+	float: left;
+}
+.nav5 li img{
+	margin-bottom: 0;
+}
