@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    <div class="big">
+        <form action="">
+            <input type="search" id="search" placeholder="请输入要查找的商品">
+            <input type="button" value="搜索" id="add" onclick="saveStorage();">
+        </form>
+        <span class="sp">最近搜索</span>
+        <div id="history">       
+        </div>
+        <span class="clear" onclick="clearStorage()" style="cursor:pointer;color: white;">X</span>
+    </div>    
+</body>
+<script>
+    function saveStorage() {
+        var text = document.getElementById('search').value;
+        var time = new Date().getTime();
+        localStorage.setItem(time,text);
+        loadStorage();
+    }
+    function loadStorage() {       
+        var result = "<div>";
+        for(var i = 0; i < localStorage.length; i++) {
+            var key = localStorage.key(i);
+            var value = localStorage.getItem(key);  
+            result += "<div class='span'>";                      
+            result += value;  
+            result += '</div>';                     
+        }   
+        result += '</div>';   
+        document.getElementById('history').innerHTML = result;
+    }
+    function clearStorage() {
+        localStorage.clear();
+        loadStorage();
+    }
+</script>
+</html>
