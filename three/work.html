@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #div{
+            width: 150px;
+            height: 80px; 
+            position: relative;
+        }
+        #canvas{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #canvas0{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <canvas id="canvas0" width="150" height="80"></canvas>
+        <canvas id="canvas" width="150" height="80"></canvas>    
+    </div>
+</body>
+<script>
+    var text = document.getElementById("canvas0");
+    var t = text.getContext("2d");
+    var arr = ["一等奖","二等奖","三等奖","谢谢参与"];
+    var i = Math.floor(Math.random()*4);
+    t.font = "bold 25px 宋体";
+    t.textAlign = "center";
+    t.fillText(arr[i],70,50);
+
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");   
+    ctx.fillStyle = "lightgrey";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.globalCompositeOperation = "destination-out";
+
+    canvas.onmousedown = function() {
+        var e=e || window.event;
+        var x = e.clientX;
+        var y = e.clientY;   
+        ctx.beginPath();     
+        ctx.arc(x,y,10,0,2*Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        canvas.onmousemove = function() {   
+            var e=e || window.event;
+            var x = e.clientX;
+            var y = e.clientY; 
+            ctx.beginPath();
+            ctx.arc(x,y,10,0,2*Math.PI);
+            ctx.fill();
+            ctx.closePath();
+            
+            var bigData = ctx.getImageData(0,0,canvas.width,canvas.height); 
+            var d = 0; 
+            for(var j = 3;j<bigData.data.length;j+=4) {
+                if(bigData.data[j]==0) {
+                    ++d;
+                } 
+            }
+            if(d>150*80*0.85) {
+                ctx.clearRect(0,0,canvas.width,canvas.height);       
+            } 
+        } 
+    }          
+</script>
+</html>
