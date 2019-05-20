@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 520px;
+            height: 590px;
+            box-shadow:0 0 0 4px inset rgb(231, 230, 230);
+            position: relative;
+            padding-top: 3px;
+            transition: all 500ms linear;
+        }
+        [id$="1"]{
+            width: 512px;
+            height: 336px;
+            margin: 0 auto;
+            overflow: hidden;            
+            transition: all 500ms linear;
+        }
+        [id$="2"]{
+            width: 450px;
+            height: 246px;
+            margin: 0 auto;
+            overflow: hidden;
+            transition: all 500ms linear;
+        }
+        [id$="3"]{
+            width: 512px;
+            height: 336px;
+            position: absolute;
+            left: 4px;
+            top: 2px;
+            background:rgba(136, 135, 135, 0); 
+            transition: all 500ms linear;
+        }
+        img{
+            transform: scale(1,1);
+            transition: all 500ms linear;
+        }
+        #box:hover{
+            box-shadow:0 0 0 4px inset rgb(168, 168, 168);
+        }
+        #box:hover #box_1{
+            height: 200px;            
+        }
+        #box:hover #box_2{
+            height: 382px;            
+        }
+        #box:hover #box_3{
+            height: 200px;
+            background:rgba(136, 135, 135, 0.6);            
+        }
+        #box:hover img{
+            transform: scale(1.5,1.5);           
+        }
+        h1{
+            margin-top: 28px;
+            margin-bottom: 28px;
+        }
+        .span1{
+            font-weight: bold;
+            color: #ffa600;
+            font-size: 25px;
+            display: block;
+            line-height: 0; 
+            margin-bottom: -5px;           
+        }
+        .span2{
+            font-size: 22px;
+            line-height: 32px;
+            display: block;
+            height: 187px;
+            overflow: hidden;
+            color: white;
+            transition: all 500ms linear;
+        }
+        #box:hover .span2{
+            color: gray;
+        }
+        .span3{
+            color: gray;
+            position: absolute;
+            bottom: 3px;
+            left: 40px;
+        }
+        .span4{
+            margin-left: 15px;
+        }
+        [id$="4"]{
+            width: 50px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 15px;
+            color: white;
+            position: absolute;
+            left: 4px;
+            bottom: 254px;
+            background: #ffa600;
+            transition: bottom 500ms linear;
+        }
+        #box:hover #box_4{
+            bottom: 390px;
+        }
+        [id$="5"]{
+            width: 42px;
+            height: 42px;
+            background-color: #ffa600;
+            border: 1px solid #ffa600;
+            border-radius: 21px;
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            color: white;
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="box_1">
+            <img src="zhanqiao.jpg" alt="" width="512" height="336">
+        </div>
+        <div id="box_2">
+            <h1>青岛栈桥</h1>
+            <span class="span1">国家AAAA级旅游景区</span>
+            <br>
+            <span class="span2">青岛栈桥是青岛海滨风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区。青岛栈桥位于游人如织的青岛中山路南端，桥身从海岸探入如弯月般的青岛湾深处。桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛。</span>
+            <p class="span3">10分钟前 <span class="span4">123评论</span></p>            
+        </div> 
+        <div id="box_3"></div> 
+        <div id="box_4">照片</div>  
+        <div id="box_5">15 <br> 5月</div>   
+    </div>
+</body>
+</html>
