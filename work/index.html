@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">	
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li,ol{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        .subject1 p {
+            margin-top: 12px;
+            font-size: 18px;
+        }
+        .subject1 p span {
+            font-size: 10px;
+        }
+        .subject2 ul li{
+            margin-left: 3em;           
+        }
+        .subject2 ul{
+            margin-left: 3em;           
+        }
+
+        @media only screen and (min-width: 680px) {
+            .subject1 {
+                background-color: #282828; 
+                width: 100%;
+                height: 45px;
+                color: #fff;
+                z-index: 2;
+            } 
+            .subject2 {
+                height: 70px;
+                width: 100%;
+                background: #fff;
+                z-index: 2;
+            }
+            .subject3 {
+                height: 345px;
+                width: 100%;
+                overflow: hidden;
+                background: #ddd;
+            }
+            .subject3 .part1 {
+                position: absolute; 
+                z-index: 1;
+                margin-top: 78px;
+                margin-left: 10%;
+                color: #e0e0e0;
+            }
+            .subject3 .part1 .p3{
+                display: none;
+            }
+            .subject3 .part1 .hr1 {
+                width: 225px;
+                margin-bottom: 10px;
+            }
+            .subject3 .part1 .hr2 {
+                width: 273px;
+                margin-top: 10px;
+            }
+            .subject3 .part1 .p1 {
+                font-size:35px;
+                font-weight: lighter;
+            }
+            .subject4 {
+                width: 100%;
+                background: #ddd;
+            }
+            .subject4 .container {
+                height: 422px;
+            }
+            .subject4 .container img {
+                margin-top: 29px;
+            }
+            .subject4 .container div {
+                margin-top: 29px;
+            }
+            .subject4 .part1 {
+                position: absolute;
+                left: 700px;
+                color: white;
+                top: 520px;
+                font-weight: lighter;
+            }
+            .subject4 .part2 {
+                display: none;
+            }
+            .subject5 {
+                width: 100%;
+                height: 1050px;
+                margin-top: -20px; 
+                background: #ddd;
+            }
+            .subject5 img {
+                width: 565px;
+            }
+            .subject5 div {
+                margin-bottom: 3px;
+            }
+            .subject5 .part1, .subject5 .part2{
+                background: black;
+                color: white;
+                width: 565px;
+                height: 74px;
+            }
+            .subject5 .container {
+                column-count: 2;
+            }
+            .subject5 .part3 {
+                position: absolute;
+                right: 102px;
+                top: 1098px;
+                width: 565px;
+                height: 74px;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.5);                
+            }
+            .subject5 .part4 {
+                position: absolute;
+                right: 102px;
+                top: 1430px;
+                width: 565px;
+                height: 74px;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.5);                 
+            }
+            .subject5 .part5 {
+                position: absolute;
+                right: 102px;
+                top: 1776px;
+                width: 565px;
+                height: 74px;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.5);  
+            }
+            .subject5 .part6 {
+                display: none;
+            }
+            .subject5 h1 span {
+                display: none;
+            }
+            .subject6 {
+                width: 100%;
+                height: 750px;
+                background: #ddd;
+                margin-top: -20px;
+            }
+            .subject6 .container {
+                column-count: 3;
+                column-gap: 8px;
+            }
+            .subject6 .container img {
+                width: 377px;
+                margin-bottom: 4px;
+            }
+            .subject6 .part1 {
+                position: absolute;
+                width: 377px;
+                height: 70px;
+                background: rgba(0, 0, 0, 0.5);
+                top: 2445px;
+                left: 104px;
+                color: white;
+            }
+            .subject6 .part2 {
+                position: absolute;
+                width: 377px;
+                height: 45px;
+                background: rgba(0, 0, 0, 0.5);
+                top: 2205px;
+                left: 487px;
+                color: white; 
+            }
+            .subject6 .part3 {
+                position: absolute;
+                width: 377px;
+                height: 45px;
+                background: rgba(0, 0, 0, 0.5);
+                top: 2472px;
+                left: 487px;
+                color: white; 
+            }
+            .subject6 .part4 {
+                position: absolute;
+                width: 377px;
+                height: 45px;
+                background: rgba(0, 0, 0, 0.5);
+                top: 2205px;
+                left: 870px;
+                color: white; 
+            }
+            .subject6 .part5 {
+                position: absolute;
+                width: 377px;
+                height: 45px;
+                background: rgba(0, 0, 0, 0.5);
+                top: 2472px;
+                left: 870px;
+                color: white; 
+            }
+            .subject6 .part6 {
+                display: block;
+                width: 222px;
+                height: 50px;
+                margin: 0 auto;
+                margin-top: 20px;
+                border: 2px solid #666;
+                border-radius: 8px;
+                padding: 5px 10px;
+                background: #ddd;
+                color: black;
+                font-size: 25px;
+                text-align: center;
+            }
+            .subject8 {
+                width: 100%;
+                height: 1446px;
+                margin-top: -20px;
+                background: #ddd url("img/back.png") no-repeat;
+            }
+            .subject8 h1 span {
+                display: none;
+            }
+            .subject8 .container .col-md-7 {
+                background: #1b4d7b;
+                height: 328px;
+            }
+            .subject8 .container .col-md-7 .p2 {
+                display: none;
+            }
+            .subject8 .part3 {
+                height: 400px;
+                background: #1c5080;
+                margin-top: 10px;
+            }
+            .subject8 .part3 div {
+                width: 340px;
+                height:400px;
+                float: left;
+            }
+            .subject8 .part3 div img {
+                margin-top: 40px;
+                margin-left: 140px;
+            }
+            .subject8 .part3 div p {
+                color: white;
+            }
+            .subject8 .part4 {
+                display: none;
+            }
+            .subject9 {
+                width: 100%;
+                height: 300px;
+                background: #000;
+            }
+            .subject9 .part1 .ul1 {
+                display: inline-block;
+                margin-top: 30px;
+            }
+            .subject9 .part1 .ul1 li {
+                float: right;
+            }
+            .subject9 .part1 .ul2 li {
+                float: left;
+                color: white;
+                margin-right: 23px;
+                font-size: 12px;
+            }
+            .subject9 .part1 .ul3 li {
+                float: left;
+                color: white;
+                margin-right: 23px;
+                font-size: 12px;
+            }
+            .subject9 .part1 .ul4 li {
+                float: left;
+                color: white;
+                margin-right: 23px;
+                font-size: 12px;
+            }
+            .subject10 {
+                width: 100%;
+                height: 200px;
+                background: #000;
+                border-top: 1px solid #ddd;
+            }
+            .subject10 p {
+                color: white;
+                text-align: center;
+            }
+            .subject10 .p1 {
+                padding-top: 80px;
+            }
+        }
+        @media only screen and (max-width: 680px) {
+            .subject1 {
+                display: none;
+            }
+            .subject2 {
+                width: 100%;
+                height: 70px;
+                z-index: 100;
+            }
+            .subject3 {
+                width: 100%;
+            }
+            .subject3 .part1 {
+                margin-top: 10px;
+                z-index: 1;
+                color: #e0e0e0;
+                position: absolute; 
+                left: 6%;
+            }
+            .subject3 .part1 .p3{
+                font-size: 13px;
+                font-weight: lighter;
+                display: block;
+            }
+            .subject3 .part1 .div1{
+                display: none;
+            }
+            .subject3 .part1 .hr1 {
+                width: 225px;
+                margin-bottom: 5px;
+            }
+            .subject3 .part1 .hr2 {
+                width: 273px;
+                margin-top: 5px;
+            }
+            .subject3 .part1 .p1 {
+                font-size:18px;
+                width: 250px;
+                font-weight: lighter;
+            }
+            .subject4 {
+                width: 100%;
+            }
+            .subject4 .part1,.subject4 .part3 {
+                display: none;
+            }
+            .subject4 .part2 {
+                display: block;
+                margin-top: 20px;
+                margin-left: 40px;
+            }
+            .subject5 .container {
+                column-count: 1;
+            }
+            .subject5 .part1,.subject5 .part2 {
+                background:black;                
+                width: 565px;
+                height: 80px;
+                right: 0px;
+                color: white;
+                
+            }
+            .subject5 .part3,.subject5 .part4,.subject5 .part5,.subject5 .img3,.subject5 .img4,.subject5 .img5 {
+                display: none;
+            }
+            .subject5 .part6 {
+                display: block;
+                width: 222px;
+                height: 50px;
+                margin: 0 auto;
+                margin-top: 20px;
+                border: 2px solid #666;
+                border-radius: 8px;
+                padding: 5px 10px;
+                background: white;
+                color: #666;
+                font-size: 25px;
+                text-align: center;
+            }
+            .subject5 h5 {
+                display: none;
+            }
+            .subject5 h1 {
+                margin-left: -250px;
+                font-size: 25px;
+            }
+            .subject5 h1 span {
+                display: inline-block;
+            }
+            .subject5 .part1,.subject5 .part2 {
+                width: 100%;
+            }
+            .subject6 .container {
+                column-count: 2;
+            }
+            .subject6 .container .img1 {
+                width: 100%;
+            }
+            .subject6 .container .img2,.subject6 .container .img5 {
+                width: 100%;
+            }
+            .subject6 .container .img2 {
+                margin-bottom: 2px;
+            }
+            .subject6 h4,.subject6 h5 {
+                display: none;
+            }
+            .subject6 h1 {
+                margin-left: -250px;
+                font-size: 25px;
+            }
+            .subject6 .part3,.subject6 .part4,.subject6 .img3,.subject6 .img4 {
+                display: none;
+            }
+            .subject6 .part1 {
+                width: 100%;
+                height: 55px;
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+            }
+            .subject6 .part2 {
+                width: 100%;
+                height: 26px;
+                color: white;
+                background: rgba(0, 0, 0, 0.5);
+            }
+            .subject6 .part5 {
+                height: 26px;
+                width: 100%;
+                color: white;
+                background: rgba(0, 0, 0, 0.5);
+            }
+            .subject6 .part6 {
+                display: block;
+                width: 222px;
+                height: 50px;
+                margin: 0 auto;
+                margin-top: 20px;
+                border: 2px solid #666;
+                border-radius: 8px;
+                padding: 5px 10px;
+                background: #ddd;
+                color: black;
+                font-size: 25px;
+                text-align: center;
+            }
+            .subject7 {
+                display: none;
+            }
+            .subject8 {
+                background: #fff url("img/back.png") no-repeat;
+                padding-top: -20px;
+            }
+            .subject8 h1,.subject8 h5 {
+                display: inline-block;
+            }
+            .subject8 h1 {
+                font-size: 25px;
+            }
+            .subject8 h1 span {
+                display: inline-block;
+            }
+            .subject8 .container .col-md-7 {
+                background: none;
+                color: black;
+                margin-top: -90px;
+               
+            }
+            .subject8 .part2 {
+                margin-top: 200px;
+            }
+            .subject8 .container .col-md-7 .p11,.subject8 .container .col-md-7 .p12,.subject8 .container .col-md-7 .p13,.subject8 .container .col-md-7 .p14 {
+                display: none;
+            }
+            .subject8 .container .p2{
+                display: inline-block;
+                width: 390px;
+            }
+            .subject8 .part3 {
+                display: none;
+            }
+            .subject8 .part4 {
+                display: block;
+                margin-left: 30px;
+                margin-top: 30px;
+            }
+            .subject8 .part4 h1 {
+                margin-left: 90px;
+            }
+            .subject8 .part4 div {
+                margin-top: 30px;
+                width: 100%;
+            }
+            .subject8 .part4 img {
+                float: left;
+            }
+            .subject8 .part4 span {
+                margin-left: 30px;
+                font-size: 10px;
+            }
+            .subject9 .part1 ul {
+                float: right;
+            }
+            .subject9 {
+                display: none;
+            }
+            .subject10 {
+                width: 100%;
+                background: #000;    
+                margin-top: 30px;            
+            }
+            .subject10 p {
+                color: white;
+                text-align: center;
+            }
+            .subject10 .p1 {
+                padding-top: 30px;
+            }
+        }        
+    </style>
+</head>
+<body data-spy="scroll" data-target="#navbar-example">
+    <div class="subject1" id="subject1">   
+        <div class="container">
+            <p class="text-right"><img src="img/tell.png" alt=""> 400-808-8682&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="#">请登录</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">注册</a></span></p>
+        </div>           
+    </div>
+    <div class="subject2" id="subject2">
+        <p></p>
+        <div class="container">
+            <nav class="navbar navbar-inverse" style="background: #fff;border:none;"> 
+                <div class="navbar-header">                        
+                    <button style="border: none" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-1">
+                        <span class="sr-only">导航开关</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-1" style="background: #e8420a;color:white;border:none;">快速定制</button>
+                    <img src="img/logo.png" alt="">   
+                </div>
+                <div class="collapse navbar-collapse" id="bs-1">
+                    <ul class="nav navbar-nav mr-auto w-100 justify-content-end">
+                        <li class="active nav-item"><a href="#subject1">首页</a></li>
+                        <li class="nav-item"><a href="#subject5">热门路线</a></li>
+                        <li class="nav-item"><a href="#subject6">签证推荐</a></li>
+                        <li class="nav-item"><a href="#subject8">使命愿景</a></li>    
+                    </ul>   
+                </div>
+            </nav>          
+        </div>
+    </div>
+    <div class="subject3">
+        <div class="part1 container">
+            <p class="p1">悠游古欧洲，遍览德法瑞意</p>
+            <div class="div1">
+                <hr class="hr1">
+                <p class="p2">巴黎卢浮宫、塞纳尔游船、凡尔赛宫</p>
+                <span>少女峰、大运河游船、金色列车、西庸城堡</span>    
+                <hr class="hr2">            
+            </div>
+            <p class="p3">全程升级热早+1晚5星酒店</p>  
+        </div>
+        <div id="generic" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img alt="First slide" src="img/banner.jpg" >
+                </div>
+                <div class="item">
+                    <img alt="Second slide" src="img/banner2.jpg">
+                </div>            
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="left carousel-control" href="#generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+    <div class="subject4">
+        <div class="part1">
+            <p style="font-size:28px;">机场接送 省钱省心</p>
+            <p>提供上海、苏州、无锡各市</p>
+            <p>往返机场、码头接送服务，更有包车服务</p>
+        </div>
+        <div class="part2">
+            <img src="img/carH.png" alt="" style="float: left;margin-right: 5px;">            
+            <p style="font-size:12px;">机场接送 省钱省心</p>
+            <p style="font-size:8px;display: inline-block;">提供上海、苏州、无锡各市</p>
+            <button style="border: 1px solide #666666;color:#666666;background: white;border-radius: 6px;padding: 5px 10px;margin-left: 10px;">查看详情</button>
+            <p style="font-size:8px;">往返机场、码头接送服务，更有包车服务</p>            
+        </div>
+        <div class="container part3" style="flex-wrap: nowrap;">            
+            <img class="img-responsive" style="width: 82%;display: inline-block" src="img/Sbanner2.jpg" alt="">                
+            <div style="background: #14316d;width:18%;height: 365px;float: right;">                
+                <img src="img/car.png" alt="" style="margin-top: 80px;margin-left:50px;">
+                <p></p>
+                <p style="color: white; margin-left: 50px; font-size: 25px; font-weight: lighter; margin-bottom: 20px;">车辆接送</p>
+                <a href="#" style="border: 1px solid white; border-radius: 8px; padding: 10px 40px; margin-left: 30px;">查看详情</a>
+            </div>           
+        </div>
+    </div>
+    <div class="subject5" id="subject5">
+        <h1 style="text-align: center;padding-top: 15px;"> <span style="color: #e8420a;">| </span> 热门路线</h1>
+        <h5 style="text-align: center;">Popular tourist routes</h5>
+        <div class="container">
+            <div>
+                <img class="img-responsive" src="img/hot1.jpg" alt="">
+            </div> 
+            <div class="part1">
+                <p>海南三亚5天4晚，纯玩、4晚红树林度假王国</p>
+                <p><span>￥2580</span><span>/人起</span></p>
+            </div>
+            <div>
+                <img class="img-responsive" src="img/hot2.jpg" alt="">
+            </div> 
+            <div class="part2">
+                <p>德法意瑞欧洲4国，ABCD任意线路由您挑选</p>
+                <p><span>￥7999</span><span>/人起</span></p>            
+            </div>          
+            <div class="img3">
+                <img class="img-responsive" src="img/hot3.jpg" alt="">
+            </div>
+            <div class="img4">
+                <img class="img-responsive" src="img/hot4.jpg" alt="">
+            </div>
+            <div class="img5">
+                <img class="img-responsive" src="img/hot5.jpg" alt="">
+            </div>           
+        </div>        
+        <div class="part3" style="">
+            <p>曼谷+芭提雅 国际五星，赠送2220大礼包，绝无自费</p>
+            <p><span>￥2799</span><span>/人起</span></p>
+        </div>
+        <div class="part4">
+            <p>日本本州游、寿司、温泉、美食</p>
+            <p><span>￥5399</span><span>/人起</span></p>
+        </div>
+        <div class="part5">
+            <p>斯里兰卡7天6晚全景游  保证入住2晚香格里拉</p>
+            <p><span>￥7999</span><span>/人起</span></p>
+        </div>
+        <div class="part6">
+            查看更多 >
+        </div>
+    </div>
+    <div class="subject6" id="subject6">
+        <h1 style="text-align: center;padding-top: 25px;"><span style="color: #e8420a;">| </span> 签证推荐</h1>
+        <h5 style="text-align: center;">Visa recommendation</h5>
+        <h4 style="text-align: center;">热门： 日本 马来西亚 美国 意大利 加拿大 新加坡</h4>
+        <div class="container">
+            <div class="img1">
+                <img class="img1" class="img-responsive" src="img/visa1.jpg" alt="">
+            </div>
+            <div class="part1">
+                <p>日本旅游签证 <span>￥420</span>/人</p>
+            </div>
+            <div class="img2">
+                <img class="img2" class="img-responsive" src="img/visa2.jpg" alt="">
+            </div>
+            <div class="part2">
+                <p>新加坡旅游签证 <span>￥370</span>/人</p>
+            </div>
+            <div class="img3">
+                <img class="img3" class="img-responsive" src="img/visa3.jpg" alt="">
+            </div>
+            <div class="img4">
+                <img class="img4" class="img-responsive" src="img/visa4.jpg" alt="">
+            </div>
+            <div class="img5">
+                <img class="img5" class="img-responsive" src="img/visa5.jpg" alt="">
+            </div>
+            <div class="part5">
+                <p>美国旅游签证 <span>￥1380</span>/人</p>
+            </div>
+        </div>
+
+
+        <div class="part3">
+            <p>申根旅游签证 <span>￥999</span>/人</p>
+        </div>
+        <div class="part4">
+            <p>马来西亚旅游签证 <span>￥450</span>/人</p>
+        </div>
+
+        <div class="part6">
+            查看更多 >
+        </div>
+    </div>
+    <div class="subject7" style="width: 100%;height: 355px;background: #ddd;">
+        <img class="img-responsive" src="img/Bbanner.jpg" alt="" style="width: 100%;padding-top: 30px;">
+    </div>
+    <div class="subject8" id="subject8">
+        <h1 style="text-align: center;padding-top: 120px;margin-left: 20px;"><span style="color: #e8420a;">|</span> 使命与愿景<span>：</span> </h1>
+        <h5 style="text-align: center;margin-bottom: 30px;">让旅游回归本质，体验纯粹旅游</h5>
+        <div class="container">
+            <div class="row part1" style="height: 320px;color: white;">
+                <div class="col-md-5" style="height: 350px;">
+                    <img class="img-responsive" src="img/mission1.jpg" alt="" style="width: 465px;">
+                </div>
+                <div class="col-md-7">
+                    <h3 style="text-align: center;margin-top: 60px;margin-bottom: 30px;">服务理念及优势</h3>
+                    <div style="width: 450px;height:120px;margin:0 auto;">
+                        <p class="p11" style="text-align:right;">“英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、</p>
+                        <p class="p12" style="text-align:right;">陪游向导服务、增值关怀项目等，为客户提供高品质的旅游体验。英华逸</p>
+                        <p class="p13" style="text-align:right;">游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提</p>
+                        <p class="p14" style="text-align:left;">供性价比高的产品和服务。</p>
+                        <p class="p2">“英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高品
+                            质的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。
+                        </p>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="part2 container">
+            <img class="img-responsive" src="img/mission2.jpg" alt="">
+        </div>
+        <div class="part3 container">
+            <div>
+                <img src="img/rorate.png" alt="">
+                <img src="img/icon1.png" alt="" style="position: absolute;top: 4070px;left: 170px;">  
+                <span style="position: absolute;top: 4170px;left: 313px;color: white;">品质行程</span>
+                <p style="margin-top: 50px;margin-left: 100px;">旅游达人精心设计、基于口碑反复打磨</p>  
+                <p style="margin-left: 130px;">全网最好，敢跟任何产品比</p>            
+            </div>
+            <div>
+                <img src="img/rorate.png" alt="">
+                <img src="img/icon2.png" alt="" style="position: absolute;top: 4060px;left: 515px;">  
+                <span style="position: absolute;top: 4170px;left: 653px;color: white;">品质消费</span>
+                <p style="margin-top: 50px;margin-left: 200px;">不推自费，</p>
+                <p style="margin-left: 150px;">不进垃圾购物店和伪景点</p>
+            </div>
+            <div>
+                <img src="img/rorate.png" alt="">
+                <img src="img/icon3.png" alt="" style="position: absolute;top: 4060px;left: 855px;">  
+                <span style="position: absolute;top: 4170px;left: 988px;color: white;">品质小团</span>
+                <p style="margin-top: 50px;margin-left: 190px;">独立成团不散拼，</p>
+                <p style="margin-left: 140px;">只跟亲朋好友一起玩，每天发团</p>
+            </div>
+        </div>
+        <div class="part4 container">
+            <h1>--服务优势--</h1>
+            <p>
+                <img src="img/icon11.png" alt="">
+                <span>旅游达人精心设计、基于口碑反复打磨，</span><br>
+                <span>告别人山人海鸡肋景点。</span><br>
+                <span>全网最好，敢跟任何产品比</span>
+            </p>
+            <div>
+                <img src="img/icon22.png" alt="">
+                <span>不推自费，</span><br>
+                <span>不进垃圾购物店和伪景点</span>
+            </div>
+            <div>
+                <img src="img/icon33.png" alt="">
+                <span>独立成团不散拼，</span><br>
+                <span>只跟亲朋好友一起玩，每天发团</span>
+            </div>
+        </div>
+    </div>
+    <div class="subject9">
+        <div class="part1 container">            
+            <ul class="ul1">
+                <li>                       
+                    <img src="img/hxrhu4.png"><br>
+                    <span style="margin-left: 30px;color: white;">携程网</span>
+                </li>
+                <li>
+                    <img src="img/hxrhu2.png"><br>
+                    <span style="margin-left: 30px;margin-right:40px;;color: white;">阿里飞猪</span>
+                </li>
+                <li>
+                    <img src="img/hxrqunaer.png"><br>
+                    <span style="margin-left: 30px;color: white;">去哪儿</span>
+                </li>
+                <li>
+                    <span style="color: white;">合作伙伴</span>
+                    <img style="display: block;margin-top: -20px; margin-left: 80px;" src="img/hxrhu1.png">
+                    <span style="color: white;margin-left: 80px;">苏州旅游局</span>
+                </li>
+            </ul><br>
+            <h5 style="color: white;display:inline-block;">热门位置</h5>
+            <ul class="ul2" style="margin-left: 80px;display: inline-block;margin-top: -30px;">                
+                <li>韩国</li>
+                <li>日本</li>
+                <li>菲律宾</li>
+                <li>越南</li>
+                <li>老挝</li>
+                <li>柬埔寨</li>
+                <li>泰国</li>
+                <li>马来西亚</li>
+                <li>新加坡</li>
+                <li>印度尼西亚</li>
+                <li>印度</li>
+                <li>斯里兰卡</li>
+                <li>土耳其</li>
+                <li>阿联酋</li>
+                <li>西班牙</li>
+                <li>意大利</li>
+                <li>希腊</li>
+                <li>法国</li>
+                <li>比利时</li>
+                <li>荷兰</li>
+                <li>英国</li>
+                <li>瑞士</li>
+                <li>奥地利</li>
+                <li>德国</li>
+                <li>匈牙利</li>
+                <li>俄罗斯</li>
+                <li>捷克</li>
+                <li>芬兰</li>
+                <li>葡萄牙</li>
+                <li>冰岛</li>
+                <li>美国</li>
+                <li>加拿大</li>
+                <li>巴西</li>
+                <li>阿根廷</li>
+                <li>澳大利亚</li>
+                <li>新西兰</li>
+            </ul><br>
+            <span style="color: white;display:inline-block;margin-top: 30px;">主题服务</span>
+            <ul class="ul3" style="margin-left: 20px;display: inline-block;margin-top: -30px;">
+                <li>海岛度假</li>
+                <li>历史文化</li>
+                <li>探索冒险</li>
+                <li>美食购物</li>
+                <li>都市生活</li>
+                <li>海外游学</li>
+                <li>邮轮度假</li>
+                <li>蜜月摄影</li>
+                <li>亲子乐园</li>
+            </ul><br>
+            <span style="color: white;display:inline-block;margin-top: 30px;">友情链接</span>
+            <ul class="ul4" style="margin-left:80px;display: inline-block;margin-top: -30px;">
+                <li>马蜂窝</li>
+                <li>穷游</li>
+                <li>booking</li>
+                <li>苏州旅游局</li>
+                <li>驴友网</li>
+                <li>吾爱全球签证中心</li>
+                <li>酒店团购</li>
+                <li>携程旅游攻略</li>
+                <li>天讯职航在线</li>
+                <li>满天飞旅游网</li>
+                <li>中国旅游网</li>
+                <li>澳乐网</li>
+                <li>背包兔旅游行程</li>
+                <li>出境旅游</li>
+                <li>国际酒店</li>
+                <li>广州旅行社</li>
+                <li>出境旅游</li>
+                <li>517旅行</li>
+                <li>花生游</li>
+                <li>家园网</li>
+                <li>海外婚礼</li>
+            </ul>
+        </div>
+    </div>
+    <div class="subject10">
+        <div class="part1">
+            <p class="p1">苏ICP备14019690号、 2014-2017 @苏州英华国际旅游有限公司 版权所有</p>
+            <p>技术支持  杭州联橙科技</p>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.js"></script>    
+<script src="js/bootstrap.min.js"></script>  
+<script src="js/myjs.js"></script>
+</html>
